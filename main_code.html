@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Length Converter</title>
+    <head>
+        <link rel="stylesheet" href="design.css">
+        <link href="http://fonts.cdnfonts.com/css/minecraft-3" rel="stylesheet">
+        <script src="converter.js" defer></script>
+    </head>
+
+    <body>
+        <center>
+            <br>
+            <br>
+            <br>
+            <div class="text-block">
+                <br>
+                <br>
+                <br>
+                <h1>Length Converter</h1>
+                <div class="select">
+                    <form>
+                        <h3><label>From :</label></h3> <!--1st measurement unit-->
+                        <select name="unit1" style="height:10vh"; id="sel1" onchange="convert()">
+                            <option style="display: none">Select the 1st unit</option>
+                            <option value="km1">Kilometers</option>
+                            <option value="m1">Meters</option>
+                            <option value="cm1">Centimeters</option>
+                            <option value="feet1">Feet</option>
+                            <option value="inch1">Inches</option>
+                            <option value="yard1">Yard</option>
+                            <option value="mile1">Miles</option>
+                        </select>
+                    </form>
+                    <form class="select1"> <!-- 2nd measurement unit-->
+                        <h3><label>To :</label></h3>
+                        <select name="unit2" style="height:10vh"; id="sel2" onchange="convert()">
+                            <option style="display: none">Select the 2nd unit</option>
+                            <option value="km2">Kilometers</option>
+                            <option value="m2">Meters</option>
+                            <option value="cm2">Centimeters</option>
+                            <option value="feet2">Feet</option>
+                            <option value="inch2">Inches</option>
+                            <option value="yard2">Yard</option>
+                            <option value="mile2">Miles</option>
+                        </select>
+                    </form>
+                </div>
+                <br>
+                <br>
+                <br>
+                <h3>Value</h3>
+                <div class="container">
+                    <input type="number" id="input" placeholder="Insert Value" oninput="convert()" onchange="convert()">
+                </div>
+                <br>
+                <h3>Result</h3>
+                <div class="container">
+                    <input type="text" id="output">
+                </div>
+            </div>
+        </center> 
+    </body>
+</html>
